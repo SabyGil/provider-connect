@@ -30,17 +30,17 @@ class UserInput extends Component {
     // debugger
     return(
       <form onSubmit={(event) => this.handleOnSubmit(event)}>
-      <p>
-        <input
-          type="text"
-          onChange={(event) => this.handleChange(event)}
-          placeholder="enter name"/>
-      </p>
+        <p>
+          <input
+            type="text"
+            onChange={(event) => this.handleChange(event)}
+            placeholder="enter name"/>
+        </p>
 
         <input type="submit" />
       </form>
-    )
+    );
   }
 }
 
-export default connect(undefined)(UserInput)
+export default connect(undefined)(UserInput);

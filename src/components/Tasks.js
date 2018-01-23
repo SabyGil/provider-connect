@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Task from "./Task";
 
-export class Tasks extends Component {
+class Tasks extends Component {
   render(){
-    const tasks = this.props.tasks.map((task, index) => <li key={index}>{task}</li>)
+
+    const tasks = this.props.tasks.map((task, index) => <Task key={index} task={task} />)
     return (
       <div>
         <ul>
@@ -14,14 +16,17 @@ export class Tasks extends Component {
   }
 }
 
+/*mapStateToProps turns state attributes into props
+for this component only
+*/
 const mapStateToProps = (state) => {
   return {
     tasks: state.tasks
   };
 };
 
-// export default connect(mapStateToProps)(Tasks);
-export const AllTasks = connect(mapStateToProps)(Tasks);
+export default connect(mapStateToProps)(Tasks);
+// export const AllTasks = connect(mapStateToProps)(Tasks);
 
 /*mapStateToProps turns state into a prop then Tasks is the class that
 receieves it */

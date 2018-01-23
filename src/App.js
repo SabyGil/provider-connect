@@ -3,7 +3,7 @@ import './App.css';
 
 // import Tasks from './components/Tasks';
 import UserInput from './components/UserInput';
-import { AllTasks } from './components/Tasks'
+import  Tasks  from './components/Tasks';
 
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
       <div className="App">
         <UserInput />
         {/* <Tasks /> */}
-        <AllTasks />
+        <Tasks />
 
       </div>
     );
